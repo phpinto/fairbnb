@@ -44,14 +44,21 @@ class PredictorController extends Controller
 
     public function pred_model(Request $request)
     {
-        //$request -> validate([
-        //    'name' => 'required|string',
-        //    'location' => 'required|string',
-        //    'room_type' => 'required|string',
-        //    'price' => 'required|string'
-        //]);
+        $request -> validate([
+            'name' => 'required|string',
+            'location' => 'required|string',
+            'room_type' => 'required|string',
+            'price' => 'required|string'
+        ]);
 
-        return response()->json($request, 200);
+        $price = (float)preg_replace("/[^0-9.]/", "", $request->price);
+
+        $response = array();
+        $mul = 1000000;
+        // $rand_num = mt_rand(0.8*$mul,1.2*$mul)/$mul;
+        $response["estimated_price"] = 1.183 * $price;
+
+        return response()->json($response, 200);
     }
 
 }

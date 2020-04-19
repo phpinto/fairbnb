@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component("predictor", require("./components/Predictor.vue").default);
 Vue.component("pulse-loader", require("vue-spinner/src/PulseLoader.vue").default);
+Vue.component("vue-speedometer", require("vue-speedometer/dist/index.js").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

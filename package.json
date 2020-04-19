@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "vue-speedometer": "^1.4.0",
         "vue-spinner": "^1.0.3"
     }
 }

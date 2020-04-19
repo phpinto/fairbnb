@@ -22,6 +22,10 @@ Route::get('/predictor',  'PredictorController@index');
 Route::post('/airbnb_url',  'PredictorController@airbnb_url');
 Route::post('/pred_model',  'PredictorController@pred_model');
 
+Route::get('/heat_map',  'HeatMapController@index');
+Route::get('/return_json',  'HeatMapController@return_json');
+Route::get('/return_image',  'HeatMapController@return_image');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

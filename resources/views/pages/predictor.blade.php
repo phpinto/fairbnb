@@ -2,5 +2,4 @@
 
 @section('content')
     <predictor></predictor>
-    
 @endsection
